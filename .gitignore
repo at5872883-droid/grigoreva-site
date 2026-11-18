@@ -1,0 +1,9 @@
+﻿.office-verify/
+preview.log
+preview.err.log
+build-albums.ps1
+albums.json
+portrait.jpg
+vospitatel.html
+*.zip
+actions*.json

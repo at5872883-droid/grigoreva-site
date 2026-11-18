@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мое хобби — Григорьева Людмила Васильевна</title>
+<meta name="description" content="Рукоделие для души: вязание, поделки, десерты и мелочи, которые делают жизнь теплее.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233f6b52'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23f6d98b'/%3E%3C/svg%3E">
+<style>
+
+  :root{
+    --paper:#fbf6ec;
+    --paper-2:#f4ecdd;
+    --card:#fffdf8;
+    --ink:#2c2925;
+    --ink-soft:#5d574e;
+    --muted:#8b8377;
+    --green:#3f6b52;
+    --green-deep:#2c4d3a;
+    --green-soft:#e5eee4;
+    --clay:#bd6a4a;
+    --gold:#e0b04a;
+    --line:rgba(60,52,40,.13);
+    --shadow:0 18px 40px -22px rgba(40,50,38,.45), 0 2px 6px rgba(40,50,38,.06);
+    --radius:18px;
+    --maxw:1160px;
+    --serif:"Georgia","Iowan Old Style","Times New Roman",serif;
+    --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(224,176,74,.12), transparent 42%),
+      radial-gradient(circle at 88% 0%, rgba(63,107,82,.10), transparent 38%),
+      radial-gradient(circle at 50% 120%, rgba(189,106,74,.08), transparent 45%);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--green-deep);text-decoration-color:rgba(63,107,82,.35);text-underline-offset:3px}
+  a:hover{color:var(--clay)}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacing:-.01em;margin:0}
+  p{margin:0 0 1em}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(251,246,236,.82);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex;align-items:center;gap:24px;min-height:68px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  .brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:#f7eed9;display:grid;place-items:center;font-family:var(--serif);font-size:18px;flex:0 0 auto}
+  .brand-text{display:flex;flex-direction:column;line-height:1.2}
+  .brand-name{font-family:var(--serif);font-size:17px}
+  .brand-role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .nav{margin-left:auto;display:flex;gap:6px;align-items:center}
+  .nav a{
+    font-size:14px;text-decoration:none;color:var(--ink-soft);
+    padding:9px 13px;border-radius:999px;transition:background .18s ease,color .18s ease;
+  }
+  .nav a:hover{background:var(--green-soft);color:var(--green-deep)}
+  .nav a.nav-cta{background:var(--green);color:#fbf6ec}
+  .nav a.nav-cta:hover{background:var(--green-deep);color:#fff}
+  .nav-toggle{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);background:var(--card);border-radius:12px;cursor:pointer;align-items:center;justify-content:center;color:var(--ink)}
+  .nav-toggle svg{width:20px;height:20px}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(32px,6vw,74px) 0 clamp(40px,6vw,72px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);background:var(--green-soft);padding:7px 14px;border-radius:999px}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .hero h1{font-size:clamp(34px,5.4vw,62px);margin:22px 0 0}
+  .hero h1 em{font-style:italic;color:var(--green-deep)}
+  .hero-role{margin-top:14px;font-size:clamp(15px,1.6vw,18px);color:var(--ink-soft)}
+  .hero-role strong{font-weight:600;color:var(--ink)}
+  .hero-motto{
+    margin-top:26px;padding:18px 22px;border-left:2px solid var(--gold);
+    font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.8vw,19px);line-height:1.55;color:var(--ink-soft);
+    background:linear-gradient(90deg,rgba(224,176,74,.09),transparent 60%);
+  }
+  .hero-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+    padding:13px 22px;border-radius:999px;font-size:14.5px;font-weight:600;
+    border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  }
+  .btn svg{width:16px;height:16px}
+  .btn-primary{background:var(--green);color:#fbf6ec;box-shadow:0 12px 24px -14px rgba(44,77,58,.9)}
+  .btn-primary:hover{background:var(--green-deep);color:#fff;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink-soft)}
+  .btn-ghost:hover{border-color:var(--green);color:var(--green-deep);background:rgba(63,107,82,.05)}
+
+  .collage{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:1/1.02}
+  .collage figure{margin:0;overflow:hidden;border-radius:16px;background:var(--paper-2);box-shadow:var(--shadow)}
+  .collage figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .collage figure:hover img{transform:scale(1.04)}
+  .collage .tall{grid-row:span 2}
+  .badge{
+    position:absolute;left:-14px;bottom:18px;background:var(--card);border:1px solid var(--line);
+    border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;
+  }
+  .badge-num{font-family:var(--serif);font-size:32px;line-height:1;color:var(--green-deep)}
+  .badge-label{font-size:12px;line-height:1.3;color:var(--muted);max-width:96px}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(44px,7vw,86px) 0}
+  .section-head{max-width:760px;margin-bottom:clamp(26px,3.5vw,42px)}
+  .section-num{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:12px}
+  .section-head h2{font-size:clamp(26px,3.6vw,40px)}
+  .section-head p{margin-top:14px;color:var(--ink-soft);font-size:16px}
+
+  .about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,52px);align-items:start}
+  .about-lead{font-family:var(--serif);font-size:clamp(18px,2.2vw,22px);line-height:1.55;color:var(--ink)}
+  .about-text p{color:var(--ink-soft);max-width:62ch}
+  .person{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .person img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 6px 18px -10px rgba(40,50,38,.6)}
+  .person-name{font-family:var(--serif);font-size:17px;line-height:1.25}
+  .person-role{font-size:12.5px;color:var(--muted)}
+
+  .fact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+  .fact-card h3{font-size:15px;font-family:var(--sans);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .facts li{display:grid;gap:2px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+  .facts li:last-child{border-bottom:0;padding-bottom:0}
+  .fact-k{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .fact-v{font-size:14.5px;color:var(--ink)}
+
+  .quote-block{
+    margin-top:clamp(30px,4vw,48px);padding:clamp(24px,3.4vw,40px);
+    border-radius:var(--radius);background:var(--green-deep);color:#f1ead9;
+    display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+  }
+  .quote-block .qmark{font-family:var(--serif);font-size:64px;line-height:.7;color:var(--gold)}
+  .quote-block p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,20px);line-height:1.6;color:#f6efe0}
+  .quote-block footer{margin-top:12px;font-size:13px;color:rgba(246,239,224,.65);font-style:normal}
+
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s ease,box-shadow .2s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card-icon{width:44px;height:44px;border-radius:13px;background:var(--green-soft);color:var(--green-deep);display:grid;place-items:center;margin-bottom:16px}
+  .card-icon svg{width:22px;height:22px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{color:var(--ink-soft);font-size:14.5px;margin:0}
+
+  .books{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .book-chip{font-size:13.5px;color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);padding:8px 14px;border-radius:999px}
+
+  .worldview{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(30px,4vw,46px)}
+  .worldview figure{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+  .worldview figure img{width:100%;height:100%;object-fit:cover}
+  .worldview blockquote{margin:0;font-family:var(--serif);font-size:clamp(17px,2vw,20px);line-height:1.6;color:var(--ink)}
+  .worldview .sign{margin-top:14px;font-size:13px;color:var(--muted)}
+
+  /* ---------- albums ---------- */
+  .album-covers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:clamp(28px,4vw,44px)}
+  .album-card{
+    display:block;position:relative;border:0;padding:0;cursor:pointer;text-align:left;background:none;
+    border-radius:16px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;
+    font-family:inherit;color:#fff;text-decoration:none;
+  }
+  .album-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .album-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(24,32,26,.86),rgba(24,32,26,.15) 55%,transparent)}
+  .album-card .ac-body{position:absolute;inset:auto 0 0 0;padding:16px;z-index:2}
+  .album-card .ac-title{font-family:var(--serif);font-size:18px;display:block;line-height:1.2}
+  .album-card .ac-count{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
+  .album-card:hover img{transform:scale(1.06)}
+  .album-card[aria-pressed="true"]{outline:3px solid var(--gold);outline-offset:3px}
+
+  .gallery-bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;justify-content:space-between;margin-bottom:18px}
+  .gallery-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,26px)}
+  .gallery-desc{color:var(--ink-soft);font-size:14px;max-width:60ch}
+  .gallery-count{font-size:13px;color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+  .thumb{
+    position:relative;border:0;padding:0;cursor:zoom-in;background:var(--paper-2);
+    border-radius:12px;overflow:hidden;aspect-ratio:1/1;
+  }
+  .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease,filter .3s ease}
+  .thumb:hover img{transform:scale(1.05)}
+  .thumb:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+
+  /* ---------- publications ---------- */
+  .pub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .pub-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px}
+  .pub-card h3{font-size:19px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .pub-card h3 span{font-size:12px;font-family:var(--sans);color:var(--muted);font-weight:400}
+  .pub-list{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .pub-list li{
+    display:flex;gap:10px;padding:9px 0;font-size:14.5px;color:var(--ink-soft);
+    border-bottom:1px solid rgba(60,52,40,.07);line-height:1.45;
+  }
+  .pub-list li:last-child{border-bottom:0}
+  .pub-list li::before{content:"·";color:var(--gold);font-size:18px;line-height:1.2;flex:0 0 auto}
+
+  /* ---------- contacts ---------- */
+  .contacts{background:var(--green-deep);color:#f3ecdc;border-radius:24px;padding:clamp(28px,4vw,52px);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,48px);align-items:center}
+  .contacts h2{color:#fbf6ec;font-size:clamp(26px,3.4vw,36px)}
+  .contacts p{color:rgba(243,236,220,.78);margin-top:12px}
+  .contact-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .contact-list li{display:grid;gap:3px;padding-bottom:14px;border-bottom:1px solid rgba(243,236,220,.16)}
+  .contact-list li:last-child{border-bottom:0;padding-bottom:0}
+  .contact-k{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,236,220,.55)}
+  .contact-v{font-size:15px;color:#fbf6ec}
+  .contact-v a{color:#fbf6ec;text-decoration-color:rgba(251,246,236,.4)}
+  .contact-v a:hover{color:var(--gold)}
+  .note{margin-top:20px;font-size:12.5px;color:rgba(243,236,220,.55)}
+
+  footer.site-footer{padding:36px 0 44px;border-top:1px solid var(--line);margin-top:clamp(34px,5vw,60px)}
+  .footer-inner{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+  .footer-inner a{color:var(--muted)}
+
+  /* ---------- lightbox ---------- */
+  .lightbox{
+    position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+    background:rgba(20,24,20,.94);padding:20px;
+  }
+  .lightbox.open{display:flex}
+  .lb-figure{margin:0;max-width:min(1100px,92vw);display:flex;flex-direction:column;align-items:center;gap:12px}
+  .lb-figure img{max-width:100%;max-height:78vh;object-fit:contain;border-radius:8px;box-shadow:0 30px 60px -30px #000}
+  .lb-caption{color:rgba(255,255,255,.78);font-size:13.5px;text-align:center}
+  .lb-btn{
+    position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+    color:#fff;width:46px;height:46px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+    transition:background .18s ease;
+  }
+  .lb-btn:hover{background:rgba(255,255,255,.22)}
+  .lb-btn svg{width:22px;height:22px}
+  .lb-close{top:18px;right:18px}
+  .lb-prev{left:18px;top:50%;transform:translateY(-50%)}
+  .lb-next{right:18px;top:50%;transform:translateY(-50%)}
+  .lb-counter{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);color:rgba(255,255,255,.65);font-size:12.5px;letter-spacing:.14em}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:1;transform:none}
+
+  @media (max-width:980px){
+    .hero-grid,.about-grid,.worldview,.contacts{grid-template-columns:1fr}
+    .cards-3{grid-template-columns:1fr 1fr}
+    .album-covers{grid-template-columns:1fr 1fr}
+    .pub-grid{grid-template-columns:1fr}
+    .collage{max-width:520px}
+    .badge{left:auto;right:12px}
+  }
+  @media (max-width:720px){
+    .nav{display:none}
+    .nav.open{
+      display:flex;position:absolute;left:16px;right:16px;top:72px;
+      flex-direction:column;align-items:stretch;gap:4px;background:var(--card);
+      border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:var(--shadow);
+    }
+    .nav.open a{padding:12px 14px}
+    .nav-toggle{display:inline-flex}
+    .cards-3{grid-template-columns:1fr}
+    .grid{grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:9px}
+    .quote-block{grid-template-columns:1fr}
+    .quote-block .qmark{font-size:44px}
+    .lb-prev{left:8px}.lb-next{right:8px}
+    .lb-btn{width:40px;height:40px}
+    .album-covers{grid-template-columns:1fr 1fr;gap:10px}
+    .album-card .ac-title{font-size:15px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  }
+
+
+  /* ---------- album page ---------- */
+  .album-page{padding:clamp(26px,4.6vw,56px) 0 clamp(48px,7vw,80px)}
+  .back-link{
+    display:inline-flex;align-items:center;gap:8px;font-size:14px;text-decoration:none;
+    color:var(--ink-soft);margin-bottom:26px;transition:color .18s ease;
+  }
+  .back-link:hover{color:var(--green-deep)}
+  .back-bottom{margin:34px 0 0}
+  .album-page h1{font-size:clamp(30px,4.6vw,48px)}
+  .album-page .gallery-count{color:var(--muted);font-size:13px;margin-bottom:18px}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html#top">
+      <span class="brand-mark">ЛГ</span>
+      <span class="brand-text">
+        <span class="brand-name">Григорьева Людмила</span>
+        <span class="brand-role">воспитатель · Тольятти</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="siteNav">
+      <a href="index.html#about">О себе</a>
+      <a href="index.html#approach">Подход</a>
+      <a href="index.html#albums">Альбомы</a>
+      <a href="index.html#publications">Публикации</a>
+      <a href="index.html#contacts" class="nav-cta">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="album-page">
+    <div class="wrap">
+      <a class="back-link" href="index.html#albums">← Все альбомы</a>
+
+      <div class="section-head">
+        <span class="section-num">Фотоальбом</span>
+        <h1>Мое хобби</h1>
+        <p>Рукоделие для души: вязание, поделки, десерты и мелочи, которые делают жизнь теплее.</p>
+      </div>
+
+      <div class="gallery-count">48 фото</div>
+
+      <div class="grid">
+        <button type="button" class="thumb" aria-label="Открыть фото 1 из 48"><img src="img/hobbi/01.jpg" alt="Мое хобби, фото 1 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 2 из 48"><img src="img/hobbi/02.jpg" alt="Мое хобби, фото 2 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 3 из 48"><img src="img/hobbi/03.jpg" alt="Мое хобби, фото 3 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 4 из 48"><img src="img/hobbi/04.jpg" alt="Мое хобби, фото 4 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 5 из 48"><img src="img/hobbi/05.jpg" alt="Мое хобби, фото 5 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 6 из 48"><img src="img/hobbi/06.jpg" alt="Мое хобби, фото 6 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 7 из 48"><img src="img/hobbi/07.jpg" alt="Мое хобби, фото 7 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 8 из 48"><img src="img/hobbi/08.jpg" alt="Мое хобби, фото 8 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 9 из 48"><img src="img/hobbi/09.jpg" alt="Мое хобби, фото 9 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 10 из 48"><img src="img/hobbi/10.jpg" alt="Мое хобби, фото 10 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 11 из 48"><img src="img/hobbi/11.jpg" alt="Мое хобби, фото 11 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 12 из 48"><img src="img/hobbi/12.jpg" alt="Мое хобби, фото 12 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 13 из 48"><img src="img/hobbi/13.jpg" alt="Мое хобби, фото 13 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 14 из 48"><img src="img/hobbi/14.jpg" alt="Мое хобби, фото 14 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 15 из 48"><img src="img/hobbi/15.jpg" alt="Мое хобби, фото 15 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 16 из 48"><img src="img/hobbi/16.jpg" alt="Мое хобби, фото 16 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 17 из 48"><img src="img/hobbi/17.jpg" alt="Мое хобби, фото 17 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 18 из 48"><img src="img/hobbi/18.jpg" alt="Мое хобби, фото 18 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 19 из 48"><img src="img/hobbi/19.jpg" alt="Мое хобби, фото 19 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 20 из 48"><img src="img/hobbi/20.jpg" alt="Мое хобби, фото 20 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 21 из 48"><img src="img/hobbi/21.jpg" alt="Мое хобби, фото 21 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 22 из 48"><img src="img/hobbi/22.jpg" alt="Мое хобби, фото 22 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 23 из 48"><img src="img/hobbi/23.jpg" alt="Мое хобби, фото 23 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 24 из 48"><img src="img/hobbi/24.jpg" alt="Мое хобби, фото 24 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 25 из 48"><img src="img/hobbi/25.jpg" alt="Мое хобби, фото 25 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 26 из 48"><img src="img/hobbi/26.jpg" alt="Мое хобби, фото 26 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 27 из 48"><img src="img/hobbi/27.jpg" alt="Мое хобби, фото 27 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 28 из 48"><img src="img/hobbi/28.jpg" alt="Мое хобби, фото 28 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 29 из 48"><img src="img/hobbi/29.jpg" alt="Мое хобби, фото 29 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 30 из 48"><img src="img/hobbi/30.jpg" alt="Мое хобби, фото 30 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 31 из 48"><img src="img/hobbi/31.jpg" alt="Мое хобби, фото 31 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 32 из 48"><img src="img/hobbi/32.jpg" alt="Мое хобби, фото 32 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 33 из 48"><img src="img/hobbi/33.jpg" alt="Мое хобби, фото 33 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 34 из 48"><img src="img/hobbi/34.jpg" alt="Мое хобби, фото 34 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 35 из 48"><img src="img/hobbi/35.jpg" alt="Мое хобби, фото 35 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 36 из 48"><img src="img/hobbi/36.jpg" alt="Мое хобби, фото 36 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 37 из 48"><img src="img/hobbi/37.jpg" alt="Мое хобби, фото 37 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 38 из 48"><img src="img/hobbi/38.jpg" alt="Мое хобби, фото 38 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 39 из 48"><img src="img/hobbi/39.jpg" alt="Мое хобби, фото 39 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 40 из 48"><img src="img/hobbi/40.jpg" alt="Мое хобби, фото 40 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 41 из 48"><img src="img/hobbi/41.jpg" alt="Мое хобби, фото 41 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 42 из 48"><img src="img/hobbi/42.jpg" alt="Мое хобби, фото 42 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 43 из 48"><img src="img/hobbi/43.jpg" alt="Мое хобби, фото 43 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 44 из 48"><img src="img/hobbi/44.jpg" alt="Мое хобби, фото 44 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 45 из 48"><img src="img/hobbi/45.jpg" alt="Мое хобби, фото 45 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 46 из 48"><img src="img/hobbi/46.jpg" alt="Мое хобби, фото 46 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 47 из 48"><img src="img/hobbi/47.jpg" alt="Мое хобби, фото 47 из 48" width="600" height="600"></button>
+        <button type="button" class="thumb" aria-label="Открыть фото 48 из 48"><img src="img/hobbi/48.jpg" alt="Мое хобби, фото 48 из 48" width="600" height="600"></button>
+      </div>
+
+      <a class="back-link back-bottom" href="index.html#albums">← Все альбомы</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year">2026</span> Григорьева Людмила Васильевна</span>
+    <span>Воспитатель · детский сад №2 «Золотая искорка» · Тольятти</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографий" tabindex="-1" hidden>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Предыдущее фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Следующее фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <figure class="lb-figure">
+    <img id="lbImage" src="" alt="">
+    <figcaption class="lb-caption" id="lbCaption"></figcaption>
+  </figure>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll(".thumb"));
+  if (!thumbs.length) return;
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lbImage");
+  var lbCap = document.getElementById("lbCaption");
+  var lbCnt = document.getElementById("lbCounter");
+  var titleEl = document.querySelector(".album-page h1");
+  var title = titleEl ? titleEl.textContent : "";
+  var idx = 0;
+  var last = null;
+
+  function show(i) {
+    idx = (i + thumbs.length) % thumbs.length;
+    var im = thumbs[idx].querySelector("img");
+    lbImg.src = im.getAttribute("src");
+    lbImg.alt = im.alt;
+    lbCap.textContent = title;
+    lbCnt.textContent = (idx + 1) + " / " + thumbs.length;
+  }
+  function open(i) {
+    last = document.activeElement;
+    show(i);
+    lb.hidden = false;
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+    lb.focus();
+  }
+  function close() {
+    lb.classList.remove("open");
+    lb.hidden = true;
+    document.body.style.overflow = "";
+    if (last && last.focus) last.focus();
+  }
+  thumbs.forEach(function (t, i) { t.addEventListener("click", function () { open(i); }); });
+  document.getElementById("lbClose").addEventListener("click", close);
+  document.getElementById("lbPrev").addEventListener("click", function () { show(idx - 1); });
+  document.getElementById("lbNext").addEventListener("click", function () { show(idx + 1); });
+  lb.addEventListener("click", function (e) { if (e.target === lb) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") show(idx - 1);
+    else if (e.key === "ArrowRight") show(idx + 1);
+  });
+  var sx = null;
+  lb.addEventListener("touchstart", function (e) {
+    if (e.touches.length === 1) sx = e.touches[0].clientX;
+  }, { passive: true });
+  lb.addEventListener("touchend", function (e) {
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 50) show(idx + (dx > 0 ? -1 : 1));
+    sx = null;
+  }, { passive: true });
+
+  var tg = document.getElementById("navToggle");
+  var nv = document.getElementById("siteNav");
+  if (tg && nv) {
+    tg.addEventListener("click", function () {
+      var o = nv.classList.toggle("open");
+      tg.setAttribute("aria-expanded", String(o));
+    });
+  }
+})();
+</script>
+</body>
+</html>
